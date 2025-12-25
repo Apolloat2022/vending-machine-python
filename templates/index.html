@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Vendor Pro 2026 Web</title>
+    <style>
+        body { background-color: #050510; color: white; font-family: 'Segoe UI', sans-serif; text-align: center; }
+        .display { background: black; color: #FFD700; border: 2px solid #FFD700; padding: 20px; border-radius: 10px; display: inline-block; margin-top: 20px; min-width: 300px; font-size: 24px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; padding: 30px; max-width: 800px; margin: auto; }
+        .item { background: #1a1a2e; border: 1px solid #FFD700; padding: 15px; border-radius: 8px; transition: 0.3s; text-decoration: none; color: white; }
+        .item:hover { background: #2a2a4e; border-color: white; transform: scale(1.05); }
+        .controls { margin-top: 20px; }
+        .btn { background: #FFD700; color: black; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 5px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>🎆 VENDOR PRO 2026 🎆</h1>
+    <div class="display">
+        CREDIT: ${{ "%.2f"|format(balance) }}
+    </div>
+    
+    <div class="controls">
+        <form action="/insert" method="post" style="display: inline;">
+            <input type="hidden" name="amount" value="5.0">
+            <button type="submit" class="btn">Insert $5</button>
+        </form>
+        <form action="/insert" method="post" style="display: inline;">
+            <input type="hidden" name="amount" value="1.0">
+            <button type="submit" class="btn">Insert $1</button>
+        </form>
+        <a href="/refund" class="btn">Refund</a>
+    </div>
+
+    <div class="grid">
+        {% for code, p in inventory.items() %}
+        <a href="/buy/{{ code }}" class="item">
+            <strong>{{ p.name }}</strong><br>
+            ${{ "%.2f"|format(p.price) }}<br>
+            <small>{{ p.quantity }} left</small>
+        </a>
+        {% endfor %}
+    </div>
+</body>
+</html>
