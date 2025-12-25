@@ -1,20 +1,146 @@
 [
     {
-        "name": "Cola",
-        "price": 1.5,
-        "quantity": 0,
+        "name": "Coke",
+        "price": 1.75,
+        "quantity": 9,
         "code": "A1"
     },
     {
-        "name": "Chips",
-        "price": 1.25,
-        "quantity": 0,
+        "name": "Pepsi",
+        "price": 1.75,
+        "quantity": 10,
         "code": "A2"
     },
     {
-        "name": "Candy",
-        "price": 1.0,
-        "quantity": 2,
+        "name": "Dr Pepper",
+        "price": 1.75,
+        "quantity": 10,
         "code": "A3"
+    },
+    {
+        "name": "Powerade",
+        "price": 2.25,
+        "quantity": 10,
+        "code": "B1"
+    },
+    {
+        "name": "Water",
+        "price": 1.25,
+        "quantity": 9,
+        "code": "B2"
+    },
+    {
+        "name": "Sparkling",
+        "price": 2.0,
+        "quantity": 10,
+        "code": "B3"
+    },
+    {
+        "name": "Iced Coffee",
+        "price": 3.5,
+        "quantity": 10,
+        "code": "C1"
+    },
+    {
+        "name": "Energy Drk",
+        "price": 3.0,
+        "quantity": 10,
+        "code": "C2"
+    },
+    {
+        "name": "Classic Chips",
+        "price": 1.5,
+        "quantity": 9,
+        "code": "C3"
+    },
+    {
+        "name": "BBQ Chips",
+        "price": 1.5,
+        "quantity": 10,
+        "code": "D1"
+    },
+    {
+        "name": "Sour Cream",
+        "price": 1.5,
+        "quantity": 10,
+        "code": "D2"
+    },
+    {
+        "name": "Pretzels",
+        "price": 1.25,
+        "quantity": 10,
+        "code": "D3"
+    },
+    {
+        "name": "Mixed Nuts",
+        "price": 2.5,
+        "quantity": 10,
+        "code": "E1"
+    },
+    {
+        "name": "Protein Bar",
+        "price": 3.0,
+        "quantity": 10,
+        "code": "E2"
+    },
+    {
+        "name": "Beef Jerky",
+        "price": 4.5,
+        "quantity": 10,
+        "code": "E3"
+    },
+    {
+        "name": "Popcorn",
+        "price": 2.0,
+        "quantity": 10,
+        "code": "F1"
+    },
+    {
+        "name": "PB Cookie",
+        "price": 2.0,
+        "quantity": 10,
+        "code": "F2"
+    },
+    {
+        "name": "Dark Choco",
+        "price": 2.5,
+        "quantity": 10,
+        "code": "F3"
+    },
+    {
+        "name": "Milk Choco",
+        "price": 2.25,
+        "quantity": 10,
+        "code": "G1"
+    },
+    {
+        "name": "Gummy Bears",
+        "price": 1.75,
+        "quantity": 10,
+        "code": "G2"
+    },
+    {
+        "name": "Skittles",
+        "price": 1.75,
+        "quantity": 10,
+        "code": "G3"
+    },
+    {
+        "name": "Brownie",
+        "price": 2.5,
+        "quantity": 10,
+        "code": "H1"
+    },
+    {
+        "name": "Fruit Snacks",
+        "price": 1.5,
+        "quantity": 10,
+        "code": "H2"
+    },
+    {
+        "name": "Mint Gum",
+        "price": 0.75,
+        "quantity": 10,
+        "code": "H3"
     }
 ]

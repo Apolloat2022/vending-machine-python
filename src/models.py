@@ -38,28 +38,21 @@ class VendingMachine:
 
     def log_transaction(self, product_name, price):
         log_path = 'data/transactions.csv'
-        file_exists = False
-        try:
-            with open(log_path, 'r'): file_exists = True
-        except FileNotFoundError: pass
-
         with open(log_path, 'a', newline='') as f:
             writer = csv.writer(f)
-            # Add header if it's a new file
-            if not file_exists:
-                writer.writerow(["Timestamp", "Product", "Price"])
             writer.writerow([datetime.now().strftime("%Y-%m-%d %H:%M:%S"), product_name, f"${price:.2f}"])
-
-    def restock_all(self, quantity=10):
-        for product in self.inventory.values():
-            product.quantity = quantity
 
     def purchase_product(self, code):
         product = self.inventory.get(code)
-        if not product or product.quantity <= 0 or self.balance < product.price:
-            return False, "Error", 0
+        if not product: return False, "Invalid Code", 0
+        if product.quantity <= 0: return False, "Out of Stock", 0
+        if self.balance < product.price: return False, "Insufficient Funds", 0
+        
         product.quantity -= 1
-        price_paid = product.price
-        change = round(self.balance - product.price, 2)
+        self.balance = round(self.balance - product.price, 2) # KEEP THE REMAINING BALANCE
+        return True, f"Enjoy your {product.name}!", product.price
+
+    def refund(self):
+        amount = self.balance
         self.balance = 0.0
-        return True, f"Dispensed {product.name}. Change: ${change:.2f}", price_paid
+        return amount
