@@ -5,10 +5,9 @@ import os
 app = Flask(__name__)
 vm = VendingMachine()
 
-# Use your existing data
 data_path = os.path.join('data', 'inventory.json')
 if not vm.load_inventory(data_path):
-    # Fallback if file is missing
+    # Fallback to ensure the web demo has items
     vm.add_product(Product("Coke", 1.75, 10, "A1"))
     vm.save_inventory(data_path)
 
@@ -36,4 +35,7 @@ def refund():
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
+    print("\n--- SERVER STARTING ---")
+    print("Go to: http://127.0.0.1:5000")
+    print("-----------------------\n")
     app.run(debug=True)
