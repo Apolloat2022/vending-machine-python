@@ -1,0 +1,11 @@
+﻿[
+    {"name": "Cola", "price": 1.50, "quantity": 5, "code": "A1"},
+    {"name": "Chips", "price": 1.25, "quantity": 5, "code": "A2"},
+    {"name": "Candy", "price": 1.00, "quantity": 5, "code": "A3"},
+    {"name": "Water", "price": 1.00, "quantity": 5, "code": "B1"},
+    {"name": "Juice", "price": 2.00, "quantity": 5, "code": "B2"},
+    {"name": "Cookie", "price": 1.50, "quantity": 5, "code": "B3"},
+    {"name": "Gum", "price": 0.50, "quantity": 5, "code": "C1"},
+    {"name": "Coffee", "price": 2.50, "quantity": 5, "code": "C2"},
+    {"name": "Tea", "price": 2.00, "quantity": 5, "code": "C3"}
+]
