@@ -1,41 +1,117 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Vendor Pro 2026 Web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Pro 2026</title>
     <style>
-        body { background-color: #050510; color: white; font-family: 'Segoe UI', sans-serif; text-align: center; }
-        .display { background: black; color: #FFD700; border: 2px solid #FFD700; padding: 20px; border-radius: 10px; display: inline-block; margin-top: 20px; min-width: 300px; font-size: 24px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; padding: 30px; max-width: 900px; margin: auto; }
-        .item { background: #1a1a2e; border: 1px solid #FFD700; padding: 15px; border-radius: 8px; transition: 0.3s; text-decoration: none; color: white; display: block; }
-        .item:hover { background: #2a2a4e; border-color: white; transform: translateY(-5px); }
-        .controls { margin-top: 20px; }
-        .btn { background: #FFD700; color: black; border: none; padding: 12px 25px; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 5px; text-decoration: none; display: inline-block; }
+        :root {
+            --gold: #FFD700;
+            --dark-blue: #050510;
+            --card-bg: #1a1a2e;
+        }
+        body { 
+            background-color: var(--dark-blue); 
+            color: white; 
+            font-family: 'Segoe UI', system-ui, sans-serif; 
+            text-align: center; 
+            margin: 0;
+            padding: 10px;
+        }
+        h1 { font-size: 1.5rem; margin-top: 20px; color: var(--gold); }
+        
+        /* Modern Digital Display */
+        .display { 
+            background: black; 
+            color: var(--gold); 
+            border: 2px solid var(--gold); 
+            padding: 15px; 
+            border-radius: 12px; 
+            display: block; 
+            margin: 10px auto; 
+            max-width: 90%;
+            font-size: 1.2rem; 
+            font-weight: bold;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+        }
+        
+        /* Controls Section */
+        .controls { 
+            display: flex; 
+            justify-content: center; 
+            gap: 10px; 
+            margin: 20px 0;
+            flex-wrap: wrap; 
+        }
+        .btn { 
+            background: var(--gold); 
+            color: black; 
+            border: none; 
+            padding: 12px 20px; 
+            border-radius: 8px; 
+            font-weight: bold; 
+            text-decoration: none; 
+            flex: 1;
+            min-width: 100px;
+            max-width: 150px;
+        }
+        .btn-refund { background-color: #ff4444; color: white; }
+
+        /* Responsive Grid */
+        .grid { 
+            display: grid; 
+            /* This line makes it 2 columns on small phones, 3 on tablets, 4 on desktops */
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+            gap: 12px; 
+            padding: 10px; 
+            max-width: 1000px; 
+            margin: auto; 
+        }
+        
+        .item { 
+            background: var(--card-bg); 
+            border: 1px solid var(--gold); 
+            padding: 15px; 
+            border-radius: 12px; 
+            text-decoration: none; 
+            color: white; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: transform 0.2s;
+            -webkit-tap-highlight-color: transparent; /* Removes blue flash on mobile tap */
+        }
+        .item:active { transform: scale(0.95); background: #2a2a4e; }
+        
+        .price { color: var(--gold); font-weight: bold; font-size: 1.1rem; margin: 5px 0; }
+        .stock { opacity: 0.6; font-size: 0.8rem; }
     </style>
 </head>
 <body>
     <h1>🎆 VENDOR PRO 2026 🎆</h1>
+    
     <div class="display">
         CREDIT: ${{ "%.2f"|format(balance) }}
     </div>
     
     <div class="controls">
-        <form action="/insert" method="post" style="display: inline;">
+        <form action="/insert" method="post">
             <input type="hidden" name="amount" value="5.0">
             <button type="submit" class="btn">Insert $5</button>
         </form>
-        <form action="/insert" method="post" style="display: inline;">
+        <form action="/insert" method="post">
             <input type="hidden" name="amount" value="1.0">
             <button type="submit" class="btn">Insert $1</button>
         </form>
-        <a href="/refund" class="btn" style="background-color: #ff4444; color: white;">Refund</a>
+        <a href="/refund" class="btn btn-refund">Refund</a>
     </div>
 
     <div class="grid">
         {% for code, p in inventory.items() %}
         <a href="/buy/{{ code }}" class="item">
-            <strong>{{ p.name }}</strong><br>
-            <span style="color: #FFD700;">${{ "%.2f"|format(p.price) }}</span><br>
-            <small style="opacity: 0.7;">Stock: {{ p.quantity }}</small>
+            <strong>{{ p.name }}</strong>
+            <span class="price">${{ "%.2f"|format(p.price) }}</span>
+            <span class="stock">Stock: {{ p.quantity }}</span>
         </a>
         {% endfor %}
     </div>
