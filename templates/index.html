@@ -3,115 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendor Pro 2026</title>
+    <title>Vendor Pro 2026 | Premium Access</title>
     <style>
         :root {
             --gold: #FFD700;
-            --dark-blue: #050510;
-            --card-bg: #1a1a2e;
+            --gold-glow: rgba(255, 215, 0, 0.3);
+            --glass: rgba(255, 255, 255, 0.05);
+            --bg: #020205;
         }
-        body { 
-            background-color: var(--dark-blue); 
-            color: white; 
-            font-family: 'Segoe UI', system-ui, sans-serif; 
-            text-align: center; 
-            margin: 0;
-            padding: 10px;
-        }
-        h1 { font-size: 1.5rem; margin-top: 20px; color: var(--gold); }
-        
-        /* Modern Digital Display */
-        .display { 
-            background: black; 
-            color: var(--gold); 
-            border: 2px solid var(--gold); 
-            padding: 15px; 
-            border-radius: 12px; 
-            display: block; 
-            margin: 10px auto; 
-            max-width: 90%;
-            font-size: 1.2rem; 
-            font-weight: bold;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-        }
-        
-        /* Controls Section */
-        .controls { 
-            display: flex; 
-            justify-content: center; 
-            gap: 10px; 
-            margin: 20px 0;
-            flex-wrap: wrap; 
-        }
-        .btn { 
-            background: var(--gold); 
-            color: black; 
-            border: none; 
-            padding: 12px 20px; 
-            border-radius: 8px; 
-            font-weight: bold; 
-            text-decoration: none; 
-            flex: 1;
-            min-width: 100px;
-            max-width: 150px;
-        }
-        .btn-refund { background-color: #ff4444; color: white; }
 
-        /* Responsive Grid */
+        body { 
+            background: radial-gradient(circle at top, #101025 0%, var(--bg) 100%);
+            color: white; 
+            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+            margin: 0; padding: 0; min-height: 100vh;
+        }
+
+        /* Cinematic Hero Section */
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+        }
+
+        h1 { 
+            font-size: 2.5rem; letter-spacing: 4px; margin: 0;
+            background: linear-gradient(to right, #fff, var(--gold), #fff);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        /* Glassmorphism Display */
+        .display-container {
+            backdrop-filter: blur(10px);
+            background: var(--glass);
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 400px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px var(--gold-glow);
+        }
+
+        .balance-label { font-size: 0.8rem; text-transform: uppercase; color: #888; letter-spacing: 2px; }
+        .balance-amount { font-size: 3rem; font-weight: 800; color: var(--gold); margin: 10px 0; }
+
+        /* Tactical Controls */
+        .controls { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
+        
+        .btn-pay {
+            background: transparent; border: 1px solid var(--gold); color: var(--gold);
+            padding: 12px 25px; border-radius: 30px; font-weight: bold; cursor: pointer;
+            transition: 0.3s; text-transform: uppercase; font-size: 0.9rem;
+        }
+
+        .btn-pay:hover { background: var(--gold); color: black; box-shadow: 0 0 15px var(--gold); }
+        .btn-refund { border-color: #ff4444; color: #ff4444; }
+        .btn-refund:hover { background: #ff4444; color: white; box-shadow: 0 0 15px rgba(255,68,68,0.5); }
+
+        /* Dynamic Grid */
         .grid { 
             display: grid; 
-            /* This line makes it 2 columns on small phones, 3 on tablets, 4 on desktops */
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
-            gap: 12px; 
-            padding: 10px; 
-            max-width: 1000px; 
-            margin: auto; 
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+            gap: 20px; padding: 0 20px 50px; max-width: 1100px; margin: auto;
         }
-        
-        .item { 
-            background: var(--card-bg); 
-            border: 1px solid var(--gold); 
-            padding: 15px; 
-            border-radius: 12px; 
-            text-decoration: none; 
-            color: white; 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            transition: transform 0.2s;
-            -webkit-tap-highlight-color: transparent; /* Removes blue flash on mobile tap */
+
+        .product-card {
+            background: var(--glass);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-decoration: none; color: white;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex; flex-direction: column; align-items: center;
         }
-        .item:active { transform: scale(0.95); background: #2a2a4e; }
-        
-        .price { color: var(--gold); font-weight: bold; font-size: 1.1rem; margin: 5px 0; }
-        .stock { opacity: 0.6; font-size: 0.8rem; }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            background: rgba(255, 215, 0, 0.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .product-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 5px; }
+        .product-price { color: var(--gold); font-weight: bold; font-size: 1.2rem; }
+        .product-stock { font-size: 0.7rem; color: #666; margin-top: 10px; text-transform: uppercase; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
     </style>
 </head>
 <body>
-    <h1>🎆 VENDOR PRO 2026 🎆</h1>
-    
-    <div class="display">
-        CREDIT: ${{ "%.2f"|format(balance) }}
-    </div>
-    
-    <div class="controls">
-        <form action="/insert" method="post">
-            <input type="hidden" name="amount" value="5.0">
-            <button type="submit" class="btn">Insert $5</button>
-        </form>
-        <form action="/insert" method="post">
-            <input type="hidden" name="amount" value="1.0">
-            <button type="submit" class="btn">Insert $1</button>
-        </form>
-        <a href="/refund" class="btn btn-refund">Refund</a>
+    <header>
+        <h1>Vendor Pro 2026</h1>
+    </header>
+
+    <div class="display-container">
+        <div class="balance-label">Current Credit</div>
+        <div class="balance-amount">${{ "%.2f"|format(balance) }}</div>
+        <div class="controls">
+            <form action="/insert" method="post" style="display:inline;">
+                <input type="hidden" name="amount" value="5.0">
+                <button type="submit" class="btn-pay">+$5</button>
+            </form>
+            <form action="/insert" method="post" style="display:inline;">
+                <input type="hidden" name="amount" value="1.0">
+                <button type="submit" class="btn-pay">+$1</button>
+            </form>
+            <a href="/refund" class="btn-pay btn-refund">Reset</a>
+        </div>
     </div>
 
     <div class="grid">
         {% for code, p in inventory.items() %}
-        <a href="/buy/{{ code }}" class="item">
-            <strong>{{ p.name }}</strong>
-            <span class="price">${{ "%.2f"|format(p.price) }}</span>
-            <span class="stock">Stock: {{ p.quantity }}</span>
+        <a href="/buy/{{ code }}" class="product-card">
+            <span class="product-name">{{ p.name }}</span>
+            <span class="product-price">${{ "%.2f"|format(p.price) }}</span>
+            <span class="product-stock">{{ p.quantity }} in stock</span>
         </a>
         {% endfor %}
     </div>
