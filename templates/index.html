@@ -7,124 +7,123 @@
     <style>
         :root {
             --gold: #FFD700;
-            --gold-glow: rgba(255, 215, 0, 0.3);
-            --glass: rgba(255, 255, 255, 0.05);
-            --bg: #020205;
+            --gold-glow: rgba(255, 215, 0, 0.4);
+            --bg: #050510;
+            --glass: rgba(255, 255, 255, 0.03);
         }
 
         body { 
-            background: radial-gradient(circle at top, #101025 0%, var(--bg) 100%);
+            background: radial-gradient(circle at center, #101025 0%, var(--bg) 100%);
             color: white; 
-            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
-            margin: 0; padding: 0; min-height: 100vh;
-        }
-
-        /* Cinematic Hero Section */
-        header {
-            padding: 40px 20px;
-            text-align: center;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
-        }
-
-        h1 { 
-            font-size: 2.5rem; letter-spacing: 4px; margin: 0;
-            background: linear-gradient(to right, #fff, var(--gold), #fff);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-        }
-
-        /* Glassmorphism Display */
-        .display-container {
-            backdrop-filter: blur(10px);
-            background: var(--glass);
-            border: 1px solid rgba(255,215,0,0.2);
-            border-radius: 20px;
-            padding: 30px;
-            margin: 20px auto;
-            max-width: 400px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px var(--gold-glow);
-        }
-
-        .balance-label { font-size: 0.8rem; text-transform: uppercase; color: #888; letter-spacing: 2px; }
-        .balance-amount { font-size: 3rem; font-weight: 800; color: var(--gold); margin: 10px 0; }
-
-        /* Tactical Controls */
-        .controls { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
-        
-        .btn-pay {
-            background: transparent; border: 1px solid var(--gold); color: var(--gold);
-            padding: 12px 25px; border-radius: 30px; font-weight: bold; cursor: pointer;
-            transition: 0.3s; text-transform: uppercase; font-size: 0.9rem;
-        }
-
-        .btn-pay:hover { background: var(--gold); color: black; box-shadow: 0 0 15px var(--gold); }
-        .btn-refund { border-color: #ff4444; color: #ff4444; }
-        .btn-refund:hover { background: #ff4444; color: white; box-shadow: 0 0 15px rgba(255,68,68,0.5); }
-
-        /* Dynamic Grid */
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
-            gap: 20px; padding: 0 20px 50px; max-width: 1100px; margin: auto;
-        }
-
-        .product-card {
-            background: var(--glass);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
-            text-decoration: none; color: white;
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-family: 'Segoe UI', system-ui, sans-serif; 
+            margin: 0; padding: 20px; min-height: 100vh;
             display: flex; flex-direction: column; align-items: center;
         }
 
-        .product-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--gold);
-            background: rgba(255, 215, 0, 0.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        /* Animated Header */
+        h1 { 
+            font-size: 2rem; letter-spacing: 5px; margin-bottom: 30px;
+            background: linear-gradient(to right, #fff, var(--gold), #fff);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-transform: uppercase; text-shadow: 0 0 20px var(--gold-glow);
         }
 
-        .product-name { font-weight: 600; font-size: 1.1rem; margin-bottom: 5px; }
-        .product-price { color: var(--gold); font-weight: bold; font-size: 1.2rem; }
-        .product-stock { font-size: 0.7rem; color: #666; margin-top: 10px; text-transform: uppercase; }
+        /* Main Glass Dashboard */
+        .dashboard {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 24px;
+            padding: 40px;
+            width: 100%; max-width: 900px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        /* Credit Display */
+        .credit-box {
+            text-align: center; margin-bottom: 30px;
+        }
+        .credit-label { font-size: 0.7rem; text-transform: uppercase; color: #888; letter-spacing: 3px; }
+        .credit-amount { 
+            font-size: 3.5rem; font-weight: 800; color: var(--gold); 
+            margin: 10px 0; font-family: 'Courier New', monospace; 
+        }
+
+        /* Interactive Controls */
+        .controls { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
+        .btn { 
+            background: transparent; border: 1px solid var(--gold); color: var(--gold);
+            padding: 12px 25px; border-radius: 12px; font-weight: bold; cursor: pointer;
+            transition: 0.3s; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;
+        }
+        .btn:hover { background: var(--gold); color: black; box-shadow: 0 0 20px var(--gold-glow); transform: translateY(-2px); }
+        .btn-refund { border-color: #ff4444; color: #ff4444; }
+        .btn-refund:hover { background: #ff4444; color: white; box-shadow: 0 0 20px rgba(255,68,68,0.4); }
+
+        /* Product Grid */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+            gap: 15px;
+        }
+
+        .item-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 20px;
+            text-decoration: none; color: white;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex; flex-direction: column; align-items: center;
+        }
+
+        .item-card:hover {
+            border-color: var(--gold);
+            background: rgba(255, 215, 0, 0.05);
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255,215,0,0.1);
+        }
+
+        .item-name { font-weight: 600; font-size: 0.9rem; margin-bottom: 8px; text-align: center; }
+        .item-price { color: var(--gold); font-weight: bold; font-size: 1.1rem; }
+        .item-stock { font-size: 0.65rem; color: #555; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px; }
 
         @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
             .grid { grid-template-columns: repeat(2, 1fr); }
+            .credit-amount { font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Vendor Pro 2026</h1>
-    </header>
+    <h1>Vendor Pro 2026</h1>
 
-    <div class="display-container">
-        <div class="balance-label">Current Credit</div>
-        <div class="balance-amount">${{ "%.2f"|format(balance) }}</div>
+    <div class="dashboard">
+        <div class="credit-box">
+            <div class="credit-label">Available Credit</div>
+            <div class="credit-amount">${{ "%.2f"|format(balance) }}</div>
+        </div>
+        
         <div class="controls">
             <form action="/insert" method="post" style="display:inline;">
                 <input type="hidden" name="amount" value="5.0">
-                <button type="submit" class="btn-pay">+$5</button>
+                <button type="submit" class="btn">Add $5</button>
             </form>
             <form action="/insert" method="post" style="display:inline;">
                 <input type="hidden" name="amount" value="1.0">
-                <button type="submit" class="btn-pay">+$1</button>
+                <button type="submit" class="btn">Add $1</button>
             </form>
-            <a href="/refund" class="btn-pay btn-refund">Reset</a>
+            <a href="/refund" class="btn btn-refund">Eject Change</a>
         </div>
-    </div>
 
-    <div class="grid">
-        {% for code, p in inventory.items() %}
-        <a href="/buy/{{ code }}" class="product-card">
-            <span class="product-name">{{ p.name }}</span>
-            <span class="product-price">${{ "%.2f"|format(p.price) }}</span>
-            <span class="product-stock">{{ p.quantity }} in stock</span>
-        </a>
-        {% endfor %}
+        <div class="grid">
+            {% for code, p in inventory.items() %}
+            <a href="/buy/{{ code }}" class="item-card">
+                <span class="item-name">{{ p.name }}</span>
+                <span class="item-price">${{ "%.2f"|format(p.price) }}</span>
+                <span class="item-stock">{{ p.quantity }} units</span>
+            </a>
+            {% endfor %}
+        </div>
     </div>
 </body>
 </html>
