@@ -4,7 +4,7 @@
       "code": "A1",
       "name": "Coke",
       "price": 1.75,
-      "quantity": 9
+      "quantity": 6
     },
     "A2": {
       "code": "A2",
@@ -28,7 +28,7 @@
       "code": "B1",
       "name": "Water",
       "price": 1.25,
-      "quantity": 8
+      "quantity": 9
     },
     "B2": {
       "code": "B2",
@@ -76,7 +76,7 @@
       "code": "D1",
       "name": "Mixed Nuts",
       "price": 2.5,
-      "quantity": 9
+      "quantity": 10
     },
     "D2": {
       "code": "D2",
@@ -124,7 +124,7 @@
       "code": "F1",
       "name": "Skittles",
       "price": 1.75,
-      "quantity": 9
+      "quantity": 10
     },
     "F2": {
       "code": "F2",
@@ -145,34 +145,18 @@
       "quantity": 10
     }
   },
-  "total_sales": 5.5,
+  "total_sales": 5.25,
   "transactions": [
-    "2025-12-28 00:47:37: Cash inserted: $5.00",
-    "2025-12-28 00:47:43: Cash inserted: $20.00",
-    "2025-12-28 00:48:27: Cash inserted: $0.05",
-    "2025-12-28 00:48:30: Cash inserted: $0.25",
-    "2025-12-28 00:48:31: Cash inserted: $5.00",
-    "2025-12-28 00:48:34: Cash inserted: $1.00",
-    "2025-12-28 00:48:35: Cash inserted: $0.10",
-    "2025-12-28 00:48:37: Cash inserted: $20.00",
-    "2025-12-28 00:48:40: Purchased Water for $1.25",
-    "2025-12-28 00:48:52: Cash inserted: $5.00",
-    "2025-12-28 00:48:56: Purchased Mixed Nuts for $2.50",
-    "2025-12-28 00:49:06: Cash inserted: $0.10",
-    "2025-12-28 00:49:08: Cash inserted: $1.00",
-    "2025-12-28 00:49:14: Cash inserted: $1.00",
-    "2025-12-28 00:49:17: Cash inserted: $1.00",
-    "2025-12-28 00:49:18: Cash inserted: $1.00",
-    "2025-12-28 00:49:19: Cash inserted: $1.00",
-    "2025-12-28 00:49:19: Cash inserted: $1.00",
-    "2025-12-28 00:49:21: Cash inserted: $0.10",
-    "2025-12-28 00:49:22: Cash inserted: $1.00",
-    "2025-12-28 00:49:24: Cash inserted: $0.25",
-    "2025-12-28 00:49:25: Cash inserted: $0.25",
-    "2025-12-28 00:49:26: Cash inserted: $0.05",
-    "2025-12-28 00:49:27: Cash inserted: $20.00",
-    "2025-12-28 00:49:28: Cash inserted: $0.10",
-    "2025-12-28 00:49:29: Cash inserted: $20.00",
-    "2025-12-28 00:49:31: Purchased Skittles for $1.75"
+    "2025-12-28 16:07:13: Cash inserted: $5.00",
+    "2025-12-28 16:07:17: Cash inserted: $1.00",
+    "2025-12-28 16:07:18: Purchased Coke for $1.75",
+    "2025-12-28 16:07:25: Cash inserted: $5.00",
+    "2025-12-28 16:07:27: Purchased Coke for $1.75",
+    "2025-12-28 16:08:23: Cash inserted: $0.25",
+    "2025-12-28 16:08:42: Cash inserted: $20.00",
+    "2025-12-28 16:08:47: Cash inserted: $0.10",
+    "2025-12-28 16:08:49: Cash inserted: $0.25",
+    "2025-12-28 16:08:51: Cash inserted: $5.00",
+    "2025-12-28 16:08:54: Purchased Coke for $1.75"
   ]
 }
