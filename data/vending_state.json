@@ -1,0 +1,178 @@
+{
+  "products": {
+    "A1": {
+      "code": "A1",
+      "name": "Coke",
+      "price": 1.75,
+      "quantity": 9
+    },
+    "A2": {
+      "code": "A2",
+      "name": "Pepsi",
+      "price": 1.75,
+      "quantity": 9
+    },
+    "A3": {
+      "code": "A3",
+      "name": "Dr Pepper",
+      "price": 1.75,
+      "quantity": 9
+    },
+    "A4": {
+      "code": "A4",
+      "name": "Powerade",
+      "price": 2.25,
+      "quantity": 10
+    },
+    "B1": {
+      "code": "B1",
+      "name": "Water",
+      "price": 1.25,
+      "quantity": 8
+    },
+    "B2": {
+      "code": "B2",
+      "name": "Sparkling",
+      "price": 2.0,
+      "quantity": 10
+    },
+    "B3": {
+      "code": "B3",
+      "name": "Iced Coffee",
+      "price": 3.5,
+      "quantity": 10
+    },
+    "B4": {
+      "code": "B4",
+      "name": "Energy Drk",
+      "price": 3.0,
+      "quantity": 10
+    },
+    "C1": {
+      "code": "C1",
+      "name": "Classic Chips",
+      "price": 1.5,
+      "quantity": 9
+    },
+    "C2": {
+      "code": "C2",
+      "name": "BBQ Chips",
+      "price": 1.5,
+      "quantity": 10
+    },
+    "C3": {
+      "code": "C3",
+      "name": "Sour Cream",
+      "price": 1.5,
+      "quantity": 10
+    },
+    "C4": {
+      "code": "C4",
+      "name": "Pretzels",
+      "price": 1.25,
+      "quantity": 10
+    },
+    "D1": {
+      "code": "D1",
+      "name": "Mixed Nuts",
+      "price": 2.5,
+      "quantity": 9
+    },
+    "D2": {
+      "code": "D2",
+      "name": "Protein Bar",
+      "price": 3.0,
+      "quantity": 10
+    },
+    "D3": {
+      "code": "D3",
+      "name": "Beef Jerky",
+      "price": 4.5,
+      "quantity": 10
+    },
+    "D4": {
+      "code": "D4",
+      "name": "Popcorn",
+      "price": 2.0,
+      "quantity": 10
+    },
+    "E1": {
+      "code": "E1",
+      "name": "PB Cookie",
+      "price": 2.0,
+      "quantity": 10
+    },
+    "E2": {
+      "code": "E2",
+      "name": "Dark Choco",
+      "price": 2.5,
+      "quantity": 10
+    },
+    "E3": {
+      "code": "E3",
+      "name": "Milk Choco",
+      "price": 2.25,
+      "quantity": 10
+    },
+    "E4": {
+      "code": "E4",
+      "name": "Gummy Bears",
+      "price": 1.75,
+      "quantity": 10
+    },
+    "F1": {
+      "code": "F1",
+      "name": "Skittles",
+      "price": 1.75,
+      "quantity": 9
+    },
+    "F2": {
+      "code": "F2",
+      "name": "Brownie",
+      "price": 2.5,
+      "quantity": 10
+    },
+    "F3": {
+      "code": "F3",
+      "name": "Fruit Snacks",
+      "price": 1.5,
+      "quantity": 10
+    },
+    "F4": {
+      "code": "F4",
+      "name": "Mint Gum",
+      "price": 0.75,
+      "quantity": 10
+    }
+  },
+  "total_sales": 5.5,
+  "transactions": [
+    "2025-12-28 00:47:37: Cash inserted: $5.00",
+    "2025-12-28 00:47:43: Cash inserted: $20.00",
+    "2025-12-28 00:48:27: Cash inserted: $0.05",
+    "2025-12-28 00:48:30: Cash inserted: $0.25",
+    "2025-12-28 00:48:31: Cash inserted: $5.00",
+    "2025-12-28 00:48:34: Cash inserted: $1.00",
+    "2025-12-28 00:48:35: Cash inserted: $0.10",
+    "2025-12-28 00:48:37: Cash inserted: $20.00",
+    "2025-12-28 00:48:40: Purchased Water for $1.25",
+    "2025-12-28 00:48:52: Cash inserted: $5.00",
+    "2025-12-28 00:48:56: Purchased Mixed Nuts for $2.50",
+    "2025-12-28 00:49:06: Cash inserted: $0.10",
+    "2025-12-28 00:49:08: Cash inserted: $1.00",
+    "2025-12-28 00:49:14: Cash inserted: $1.00",
+    "2025-12-28 00:49:17: Cash inserted: $1.00",
+    "2025-12-28 00:49:18: Cash inserted: $1.00",
+    "2025-12-28 00:49:19: Cash inserted: $1.00",
+    "2025-12-28 00:49:19: Cash inserted: $1.00",
+    "2025-12-28 00:49:21: Cash inserted: $0.10",
+    "2025-12-28 00:49:22: Cash inserted: $1.00",
+    "2025-12-28 00:49:24: Cash inserted: $0.25",
+    "2025-12-28 00:49:25: Cash inserted: $0.25",
+    "2025-12-28 00:49:26: Cash inserted: $0.05",
+    "2025-12-28 00:49:27: Cash inserted: $20.00",
+    "2025-12-28 00:49:28: Cash inserted: $0.10",
+    "2025-12-28 00:49:29: Cash inserted: $20.00",
+    "2025-12-28 00:49:31: Purchased Skittles for $1.75"
+  ]
+}
